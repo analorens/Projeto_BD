@@ -1,14 +1,14 @@
-# Projeto do Banco de Dados SAM (v1.0)
+# Projeto do Banco de Dados (v1.0)
 Wladmir Cardoso Brandão Março 30, 2020
 ## Professor
 Marco Paulo
 
 ## Integrantes
-Ana Lorens
-Álvaro Félix
-Augusto Henrique
-Leonardo Andrade
-Vitor Martins
+Ana Lorens  
+Álvaro Félix  
+Augusto Henrique  
+Leonardo Andrade  
+Vitor Martins  
 Walker Rocha
 
 ## Resumo
