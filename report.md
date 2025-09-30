@@ -4,11 +4,16 @@ Wladmir Cardoso Brandão Março 30, 2020
 Marco Paulo Soares Gomes
 
 ## Integrantes
-Ana Cecília Souza Lorens 
+Ana Cecília Souza Lorens
+
 Álvaro Félix da Silva
-Augusto Henrique Gonçalves Valbonetti 
+
+Augusto Henrique Gonçalves Valbonetti
+
 Leonardo Andrade Caetano Dornelas
+
 Vitor Martins Gonçalves
+
 Walker Junio Gonzaga Rocha
 
 ## Resumo
