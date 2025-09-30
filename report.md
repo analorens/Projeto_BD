@@ -1,15 +1,15 @@
 # Projeto do Banco de Dados (v1.0)
 Wladmir Cardoso Brandão Março 30, 2020
 ## Professor
-Marco Paulo
+Marco Paulo Soares Gomes
 
 ## Integrantes
-Ana Lorens  
-Álvaro Félix  
-Augusto Henrique  
-Leonardo Andrade  
-Vitor Martins  
-Walker Rocha
+Ana Cecília Souza Lorens 
+Álvaro Félix da Silva
+Augusto Henrique Gonçalves Valbonetti 
+Leonardo Andrade Caetano Dornelas
+Vitor Martins Gonçalves
+Walker Junio Gonzaga Rocha
 
 ## Resumo
 O presente relatório apresenta o projeto do banco de dados SAM (Sistema Acadêmico de Matrícula). Especificamente, o relatório apresenta o resultado das atividades de especificação do minimundo, análise de requisitos,
