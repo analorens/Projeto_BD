@@ -37,8 +37,33 @@ de dados dentro do paradigma relacional.
 ## 2 Especificação do Minimundo
 Um mini mundo em banco de dados corresponde a uma representação simplificada e delimitada de uma parte específica do mundo real, escolhida para ser organizada dentro de um sistema de banco de dados. Essa abordagem tem como objetivo selecionar apenas os dados relevantes para o contexto de um projeto, estabelecendo com clareza o escopo do que será armazenado e utilizado pela aplicação. Dessa forma, evita-se a inclusão de informações desnecessárias, reduzindo a sobrecarga e garantindo que o modelo seja mais objetivo e funcional.
 
-Um banco de dados para um sistema acadêmico que gerencia a matrícula de alunos em aulas especializadas. Em particular, as aulas são categorizados por tipo, sendo eles: reforço, inglês, pré-técnico, e pré-enem. As aulas no geral possuem hora de início, hora de fim, duração, modalidade, relatório/observações, aula realizada, professor. As aulas de reforço são sempre individuais, possuem matéria. Já as aulas de inglês possuem: Conteúdo abordado na aula, professor que ministrou a aula, class que recebeu a aula, dever de casa e registro de qual é o conteúdo da próxima aula. As aulas Pré-CEFET e Pré-ENEM possuem uma turma, e uma disciplina. Sendo que cada disciplina do Pré enem e pré CEFET possuem professor e horário fixo. Todos Alunos possuem um responsável e o responsável pode ser resposável por vários alunos. Aluno possui nome,telefone e caso o aluno adquira um plano, ele possuirá também: cpf, endereço, Nº do contrato, status, detalhe do plano. Aluno pode participar de diferentes tipos de aula. Planos possuem: modalidade, frequência de aulas por semana, em grupo ou individual, se paga
-taxa de matricula, desconto, data de vencimento, valor do curso. Professor possui cpf, rg, comprovante de endereço, endereço, dados bancários. Professor pode ser CLT ou Horista. Ambas especializações de professor possuem contrato no qual possui: Data de Inicio. Porém o contrato do Professor CLT possui data de fim.
+Um banco de dados para um sistema acadêmico que gerencia a matrícula de alunos em aulas especializadas. 
+
+Em particular, as aulas são categorizados por tipo, sendo eles: reforço, inglês, pré-técnico, e pré-enem.
+
+As aulas no geral possuem hora de início, hora de fim, duração, modalidade, relatório/observações, aula realizada, professor. 
+
+As aulas de reforço são sempre individuais, possuem matéria. 
+
+Já as aulas de inglês possuem: Conteúdo abordado na aula, professor que ministrou a aula, class que recebeu a aula, dever de casa e registro de qual é o conteúdo da próxima aula. 
+
+As aulas Pré-CEFET e Pré-ENEM possuem uma turma, e uma disciplina. 
+
+Sendo que cada disciplina do Pré enem e pré CEFET possuem professor e horário fixo. 
+
+Todos Alunos possuem um responsável e o responsável pode ser resposável por vários alunos. 
+
+Aluno possui nome,telefone e caso o aluno adquira um plano, ele possuirá também: cpf, endereço, Nº do contrato, status, detalhe do plano. 
+
+Aluno pode participar de diferentes tipos de aula. 
+
+Planos possuem: modalidade, frequência de aulas por semana, em grupo ou individual, se paga taxa de matricula, desconto, data de vencimento, valor do curso. 
+
+Professor possui cpf, rg, comprovante de endereço, endereço, dados bancários. 
+
+Professor pode ser CLT ou Horista. 
+
+Ambas especializações de professor possuem contrato no qual possui: Data de Inicio. Porém o contrato do Professor CLT possui data de fim.
 
 # 1
 ## 2.1 Requisitos Funcionais
