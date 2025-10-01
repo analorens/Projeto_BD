@@ -1,5 +1,5 @@
 # Projeto do Banco de Dados (v1.0)
-Wladmir Cardoso Brandão Março 30, 2020
+
 ## Professor
 Marco Paulo Soares Gomes
 
