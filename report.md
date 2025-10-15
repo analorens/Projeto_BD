@@ -85,45 +85,14 @@ dos cursos da área
 GeRÊncia A
 Q022 Visualizar o número de matrículas efetuadas, GeRÊncia A
 2
-3 Projeto Conceitual
-Essa seção apresenta o projeto conceitual do SAM (v1.0), descrevento as principais estruturas e restrições conceituais
+# 3 Projeto Conceitual
+Essa seção apresenta o projeto conceitual da Help, descrevento as principais estruturas e restrições conceituais
 do nanco de dados. Particularmente, a Figura 1 apresenta o diagrama entidade-relacionamento (ER) do modelo
-conceitual do SAM.
-Área
-Sigla
-Nome
-possui integra
-Curso
-Sigla Nome
-Horas
-Custo Professores
-CPF
-Nome
-matricula possui
-Data
-Pago
-Aluno
-CPF Nome
-Data Nascimento
-Sexo
-Primeiro Nome
-Sobrenome
-Módulo
-Sigla
-Nome
-possui
-Sigla Tópico
-Nome
-Horas
-1
-N
-1
-N
-N 1 N
-N
-1
-N
-Figura 1: Diagrama ER do modelo conceitual do banco de dados SAM (v1.0)
+conceitual da Help.
+
+<img width="2769" height="1177" alt="Escola - PCD II-Página-3 drawio" src="https://github.com/user-attachments/assets/bb1243e4-d196-4651-85c6-1f2ec4ab12e4" />
+
+Figura 1: Diagrama ER do modelo conceitual do banco de dados Help
 Adicionalmente, a Tabela 2 apresenta com mais detalhes os elementos descritos no diagrama apresentados
 na Figura 1. Na Tabela 2, podemos observar que foram identificadas na descrição textual do minimundo cinco
 entidades, com uma média de quatro atributos por entidade. Além disso, foram identificados cinco relacionamentos
@@ -177,7 +146,7 @@ função possuído (N)
 Restrição Cardinalidade C008 1-N R005 E004 função possuidor (1), E005
 função possuído (N)
 4
-4 Projeto Lógico
+# 4 Projeto Lógico
 Essa seção apresenta o projeto lógico do banco de dados SAM (v1.0), descrevento as principais estruturas e restrições
 lógicas baseadas no modelo de implementação relacional. Particularmente, a Figura 2 apresenta o diagrama relacional
 do banco de dados, mapeado a partir do modelo conceitual descrito na Seção 3 do presente relatório.
