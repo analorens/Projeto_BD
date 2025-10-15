@@ -28,6 +28,14 @@ chaves primárias das tabelas de origem. Adicionalmente, existem índices para c
 para acelerar o processamento de transações sobre os arquivos.
 ## 1 Introdução
 
+Instituições de ensino de apoio pedagógico precisam manter seus registros organizados e atualizados a fim de dar suporte a alunos e professores na execução de suas atividades de aprendizagem. A escolha da abordagem de banco de dados utilizada para organização e manutenção desses registros acadêmicos influencia a efetividade com
+que as atividades são desenvolvidas. O objetivo do presente trabalho é propor um projeto de banco de dados para um sistema acadêmico de aulas especializadas que pode ser utilizado por diversas escolas de apoio pedagógico particular para gerenciar seus processos de matrícula de alunos em turmas e planos de aulas. Particularmente, propõe-se uma especificação de minimundo, análise de requisitos, projeto conceitual, projeto lógico e projeto físico do banco de dados, utilizando como base o modelo relacional e podendo ser implementado em sistemas gerenciadores de banco de dados (SGBD) relacionais comerciais.
+A Seção 2 apresenta a especificação de minimundo do babco de dados, incluindo uma descrição textual das
+principais características e restrições de dados. A Seção 3 apresenta o projeto conceitual do banco de dados, incluindo
+diagrama entidade-relacionamento (ER) que representa de forma gráfica as principais definições conceituais, próximas à forma como os usuários percebem o banco de dados. A Seção 4 apresenta o projeto lógico do banco de dados,
+incluindo diagrama relacional que representa de forma gráfica as principais definições para implementação do banco
+de dados dentro do paradigma relacional.
+
 ## 2 Especificação do Minimundo
 Em modelagem de banco de dados, um minimundo é a representação simplificada e bem delimitada de uma parte específica do mundo real, recortada para atender ao objetivo de um sistema. Em vez de espelhar toda a realidade, o minimundo seleciona apenas as entidades, relacionamentos e atributos relevantes para o projeto, deixando claro o escopo do que será armazenado e utilizado pela aplicação. Essa delimitação evita incluir informações desnecessárias, reduz a sobrecarga de dados e torna o modelo mais objetivo, consistente e funcional. O minimundo deste projeto descreve um sistema acadêmico para gerenciamento de alunos, responsáveis, professores, planos, turmas/disciplinas e aulas nas modalidades Reforço, Inglês, Pré-ENEM e Pré-CEFET.
 
