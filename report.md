@@ -27,6 +27,8 @@ banco de dados é composto por sete arquivos indexados com índice em cada um do
 chaves primárias das tabelas de origem. Adicionalmente, existem índices para cada uma das chaves estrangeiras
 para acelerar o processamento de transações sobre os arquivos.
 ## 1 Introdução
+
+## 2 Especificação do Minimundo
 Em modelagem de banco de dados, um minimundo é a representação simplificada e bem delimitada de uma parte específica do mundo real, recortada para atender ao objetivo de um sistema. Em vez de espelhar toda a realidade, o minimundo seleciona apenas as entidades, relacionamentos e atributos relevantes para o projeto, deixando claro o escopo do que será armazenado e utilizado pela aplicação. Essa delimitação evita incluir informações desnecessárias, reduz a sobrecarga de dados e torna o modelo mais objetivo, consistente e funcional. O minimundo deste projeto descreve um sistema acadêmico para gerenciamento de alunos, responsáveis, professores, planos, turmas/disciplinas e aulas nas modalidades Reforço, Inglês, Pré-ENEM e Pré-CEFET.
 
 O _'Aluno'_ possui nome e telefone; ao adquirir um plano, passa a ter também CPF, ENDEREÇO, BAIRRO, COMPLEMENTO, CEP, CIDADE/ESTADO, NÚMERO DE CONTRATO, EMAIL, STATUS e DETALHES DO PLANO. Todo aluno deve possuir responsável legal; uma mesma pessoa pode acompanhar vários alunos. Quando maior de idade, o próprio aluno assume essa função. Os dados do _'Responsável legal'_ — -(identificação e contato)-* — são mantidos para o vínculo.
@@ -40,52 +42,8 @@ O _'Professor'_ mantém CPF, RG, ENDEREÇO e DADOS BANCÁRIOS. Há dois TIPOS DE
 Em síntese, este minimundo restringe-se à gestão dos atores (aluno, responsável, professor), das ofertas acadêmicas (planos, turmas, disciplinas) e da operação diária (aulas e seus registros), com escopo claro para suportar matrículas, agendamentos, acompanhamento pedagógico sem extrapolar para processos externos ao ambiente acadêmico definido.
 
 
-## 2.1 Requisitos Funcionais
-Diferentes grupos de usuários demandarão diferentes operações de manipulação de dados sobre diferentes porções
-do banco de dados. O grupo SecRetaRia demandará atualização e recuperação de dados sobre praticamente todas
-os elementos do banco de.dados, uma vez que esse grupo será o responsável por manter os dados atualizados, dando
-suporte aos outros grupos. O grupo PRofessoR demandará consultas de recuperação de dados sobre suas alocações
-a cursos. O grupo Aluno demandará consultas para atualização de seus dados cadastrais e para manipulação de
-dados sobre suas matrículas. O grupo GeRÊncia demandará a recuperação de dados agrupados sobre matrícula e
-cursos, tais como carga horária, custo e alocações de professores e alunos. O grupo GeRal demandará recuperação
-de dados sobre áreas, cursos, módulos e tópicos para tomada de decisão sobre inscrição como aluno ou professor da
-instituição de.ensino. A Tabela 1 apresenta as principais consultas que cada grupo de usuários demandará ao sistema
-de banco de dados, bem como a frequência esperada de submissão (A para alta, M para média e B para baixa.
-Tabela 1: Frequência esperada de consultas por grupo de usuário
-Consulta Grupo Frequência
-Q001 Visualizar os cursos em que está alocado PRofessoR M
-Q002 Atualizar dados cadastrais Aluno B
-Q003 Efetivar matrícula em cursos Aluno B
-Q004 Alterar matrícula em cursos Aluno B
-Q005 Recuperar os cursos, e cargas horárias, em que está matriculado Aluno M
-Q006 Visualizar lista de cursos por área de conhecimento GeRal A
-Q007 Visualizar módulos por curso GeRal A
-Q008 Visualizar tópicos por módulo do curso GeRal A
-Q009 Visualizar lista de professores por curso GeRal M
-Q010 Atualizar áreas de conhecimento SecRetaRia B
-Q011 Atualizar cursos SecRetaRia A
-Q012 Atualizar módulos de cursos SecRetaRia M
-Q013 Atualizar tópicos de módulos de cursos SecRetaRia M
-Q014 Atualizar dados cadastrais de professores SecRetaRia B
-Q015 Visualizar o número total de cursos, sua carga horária e custo total por área
-de conhecimento GeRÊncia A
-Q016 Visualizar para cada curso seu custo relativo (custo absoluto por carga horária)
-e o número de módulos que o compõe GeRÊncia B
-Q017 Visualizar para cada módulo de curso, o número total de tópicos e a carga
-horária mínima, máxima, média e total GeRÊncia B
-Q018 Visualizar por área a média de carga horária e custo de cursos GeRÊncia B
-Q019 Visualizar cada área, seu respectivo número de nível e o número de áreas de
-nível imediatamente inferior GeRÊncia B
-Q020 Visualizar, para cada área, o curso com maior carga horária, e sua respectiva
-carga GeRÊncia A
-Q021
-Visualizar, para cada área, seus cursos e suas respectivas cargas horárias e
-custos, para os cursos em que as cargas horárias sejam maiores que a média
-dos cursos da área
-GeRÊncia A
-Q022 Visualizar o número de matrículas efetuadas, GeRÊncia A
-2
-# 3 Projeto Conceitual
+
+## 3 Projeto Conceitual
 Essa seção apresenta o projeto conceitual da Help, descrevento as principais estruturas e restrições conceituais
 do nanco de dados. Particularmente, a Figura 1 apresenta o diagrama entidade-relacionamento (ER) do modelo
 conceitual da Help.
@@ -99,54 +57,7 @@ entidades, com uma média de quatro atributos por entidade. Além disso, foram i
 entre entidades, bem como suas respectivas restrições de cardinalidade, e três restrições de totalidade presentes em
 três relacionamentos diferentes.
 3
-Tabela 2: Elementos do modelo conceitual do banco de dados SAM (v1.0)
-Tipo Subtipo ID Rótulo Referência Descrição
-Entidade Forte E001 Aluno
-Entidade Forte E002 Área
-Entidade Forte E003 Curso
-Entidade Forte E004 Módulo
-Entidade Fraca E005 Tópico
-Relacionamento Forte R001 integra E002
-Relacionamento Forte R002 matricula E001, E003
-Relacionamento Forte R003 possui E002, E003
-Relacionamento Forte R004 possui E003, E004
-Relacionamento Fraco R005 possui E004, E005
-Atributo Chave A001 CPF E001
-Atributo Composto A002 Nome E001
-Atributo Simples A003 Primeiro Nome E001, A002
-Atributo Simples A004 Sobrenome E001, A002
-Atributo Simples A005 Sexo E001
-Atributo Simples A006 Data Nascimento E001
-Atributo Chave A007 Sigla E002
-Atributo Simples A008 Nome E002
-Atributo Chave A009 Sigla E003
-Atributo Simples A010 Nome E003
-Atributo Simples A011 Custo E003
-Atributo Derivado A012 Horas E003
-Atributo Multivalorado
-Composto A013 Professores E003
-Atributo Simples A014 CPF E003, A013
-Atributo Simples A015 Nome E003, A013
-Atributo Chave A016 Sigla E004
-Atributo Simples A017 Nome E004
-Atributo Chave A018 Sigla E005
-Atributo Simples A019 Nome E005
-Atributo Simples A020 Horas E005
-Restrição Totalidade C001 R002 E003 total em R002
-Restrição Totalidade C002 R004 E004 total em R004
-Restrição Totalidade C003 R005 E005 total em R005
-Restrição Cardinalidade C004 1-N R001 E002 função integrado (1), E002
-função integrante (N)
-Restrição Cardinalidade C005 N-N R002 E003 função matriculante (N),
-E001 função matriculado (N)
-Restrição Cardinalidade C006 1-N R003 E002 função possuidor (1), E003
-função possuído (N)
-Restrição Cardinalidade C007 1-N R004 E003 função possuidor (1), E004
-função possuído (N)
-Restrição Cardinalidade C008 1-N R005 E004 função possuidor (1), E005
-função possuído (N)
-4
-# 4 Projeto Lógico
+## 4 Projeto Lógico
 Essa seção apresenta o projeto lógico do banco de dados SAM (v1.0), descrevento as principais estruturas e restrições
 lógicas baseadas no modelo de implementação relacional. Particularmente, a Figura 2 apresenta o diagrama relacional
 do banco de dados, mapeado a partir do modelo conceitual descrito na Seção 3 do presente relatório.
@@ -181,7 +92,7 @@ para NOT NULL), e integridade referencial, com losango vermelho representado cha
 5
 Figura 3: EER do modelo de implementação relacional do SAM (v1.0)
 6
-5 Conclusão
+## 5 Conclusão
 O presente relatório apresentou o projeto do banco de dados SAM (v1.0) para um sistema acadêmico de matrícula que,
 em sua versão 1.0, pode ser utilizado por diversas instituições de ensino para gerenciar seus processos de matrícula
 de alunos em cursos. Especificamente, propusemos uma especificação de minimundo e apresentamos os requisitos
