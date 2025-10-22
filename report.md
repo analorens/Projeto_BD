@@ -56,7 +56,7 @@ Essa seção apresenta o projeto conceitual da Help, descrevento as principais e
 do nanco de dados. Particularmente, a Figura 1 apresenta o diagrama entidade-relacionamento (ER) do modelo
 conceitual da Help.
 
-<img width="2769" height="1177" alt="Escola - PCD II-Página-3 drawio" src="https://github.com/user-attachments/assets/bb1243e4-d196-4651-85c6-1f2ec4ab12e4" />
+<img width="2586" height="1494" alt="Escola - PCD II-Marco drawio" src="https://github.com/user-attachments/assets/ea331f9c-7acb-4123-b6fe-612d59076a3f" />
 
 Figura 1: Diagrama ER do modelo conceitual do banco de dados Help
 Adicionalmente, a Tabela 2 apresenta com mais detalhes os elementos descritos no diagrama apresentados
